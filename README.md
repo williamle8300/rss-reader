@@ -6,9 +6,13 @@ an rss reader that I'm working on
 
 ## Development
 
-`npm run dev`
+```
+npm run dev
+```
 
 ## Production
 
-`npm run build`
-`npm run serve`
+```bash
+npm run build
+npm run serve
+```

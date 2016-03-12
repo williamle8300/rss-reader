@@ -1,8 +1,15 @@
+
+
 # rss reader
 
-an rss reader that I'm working on
+a pretty nifty rss reader
 
 # Deploy
+
+Reference: https://github.com/babel/example-node-server
+
+- Source files are in /lib
+- Babel'd files are in /dist
 
 ## Development
 
@@ -12,7 +19,7 @@ npm run dev
 
 ## Production
 
-```bash
+```
 npm run build
 npm run serve
 ```

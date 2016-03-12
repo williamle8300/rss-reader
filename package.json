@@ -4,14 +4,17 @@
   "description": "an rss reader",
   "scripts": {
     "dev": "nodemon lib/server.js --exec babel-node --presets es2015,stage-2",
-		"build": "babel lib -d dist --presets es2015,stage-2",
-		"serve": "node dist/server.js",
+    "build": "babel lib -d dist --presets es2015,stage-2",
+    "serve": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "William Le",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^13.2.1"
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.2.1",
+    "inert": "^3.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",

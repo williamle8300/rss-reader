@@ -2,22 +2,29 @@
 
 # rss reader
 
-a pretty nifty rss reader
+a pretty swell rss reader
 
-# Deploy
+# requirements
 
-Reference: https://github.com/babel/example-node-server
+homebrew
+postgresql (install via homebrew)
+hapi
+react
 
-- Source files are in /lib
-- Babel'd files are in /dist
+# deploy
 
-## Development
+reference: https://github.com/babel/example-node-server
+
+- source files are in /lib
+- babel'd files are in /dist
+
+## development
 
 ```
 npm run dev
 ```
 
-## Production
+## production
 
 ```
 npm run build

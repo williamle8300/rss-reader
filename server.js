@@ -1,13 +1,11 @@
-'use strict'
+var Good = require('good');
+var GoodConsole = require('good-console');
+var Hapi = require('hapi');
 
-import Good from 'good';
-import GoodConsole from 'good-console';
-import Hapi from 'hapi';
+var HomeRoutes = require('./routes/home');
+var RssFeedRoutes = require('./routes/rss-feed');
 
-import HomeRoutes from './routes/home';
-import RssFeedRoutes from './routes/rss-feed';
-
-const server = new Hapi.Server();
+var server = new Hapi.Server();
 
 server.connection({
 	routes: {cors: true},
@@ -26,7 +24,7 @@ server.register([{
 			}
 		}]
 	}
-}], (err) => {
+}], function (err) {
 		
 	if (err) {
 		throw err;

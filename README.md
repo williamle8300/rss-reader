@@ -14,8 +14,8 @@ react
 
 # prepare a database
 
-1. create a database called "rss-reader" (not sure what the sql command is since I used a gui pgAdmin3)
-2. set user to 'william' and password is ''.
+1. create a database called `rss_reader`
+2. set user to 'william' and password is ''
 
 # deploy
 
@@ -45,5 +45,8 @@ TUES march 15
 - setup `bookshelf` in hapi
 
 WEDS march 16
-- learned how to use `bookshelf` by going through tutorials. namely to create a non-existent database, and insert rows. create a schema in postgres. (POST: rssfeed {url: 'cool.com'})
-- GET this data from rssfeed table
+- switched hapi back to ES5; turn off Babel `compiling`
+- learned `bookshelf` tutorials. create new db, table, insert rows
+- learned basics of sql commands, and mysql datatypes 
+- create a schema in postgres. (POST: rssfeed {url: 'cool.com'})
+- GET data from rssfeed table

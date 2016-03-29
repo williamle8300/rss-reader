@@ -1,16 +1,19 @@
 var Good = require('good');
 var GoodConsole = require('good-console');
 var Hapi = require('hapi');
+var R = require('rethinkdb');
 
+var Config = require('./config');
+var Database = require('./database');
 var HomeRoutes = require('./routes/home');
 var RssFeedRoutes = require('./routes/rss-feed');
 
 var server = new Hapi.Server();
 
 server.connection({
-	routes: {cors: true},
-	host: 'localhost',
-	port: 3000
+	host: Config.server.host,
+	port: Config.server.port,
+	routes: {cors: true}
 });
 
 server.register([{
@@ -30,15 +33,23 @@ server.register([{
 		throw err;
 	};
 
+	/*
+		routes
+	*/
 	server.route(HomeRoutes);
 	server.route(RssFeedRoutes);
-
-	server.start((err) => {
-
+	
+	/*
+		spin it uppppp!
+	*/
+	Database.init(function (err, connection) {
+		
 		if (err) {
 			throw err;
 		};
-
-		server.log('info', 'Server running at: ' +server.info.uri);
+		
+		server.start(function () {
+			console.log('Server running at: ' +server.info.uri);
+		});	
 	});
 });

@@ -4,7 +4,6 @@ var R = require('rethinkdb');
 
 var Config = require('../config');
 var Database = require('../database');
-var RssFeed = require('../models/RssFeed');
 
 
 module.exports = [
@@ -141,7 +140,9 @@ module.exports = [
 			});
 		}
 	},
-	//add a few more api enpoints to mod an rss feed (like 'title')
+	
+	//some UPDATE methods go here!
+	
 	{
 		path: '/rss-feed/{id}',
 		method: 'DELETE',

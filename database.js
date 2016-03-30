@@ -46,7 +46,7 @@ module.exports = {
 				}
 				
 				if (doesExist) {
-					connection.use(Config.rethink.db);			//sets the default db for duration of connection
+					connection.use(Config.rethink.db);			//config the default db. normally, the default is the db "test"
 				};
 
 		    callback(null, connection);

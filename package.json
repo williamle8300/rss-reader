@@ -1,12 +1,11 @@
 {
-  "name": "rss-reader",
+  "name": "aloe_0",
   "version": "0.0.0",
-  "description": "an rss reader",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "William Le",
+  "author": "William Le <williamle8300@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "async": "^2.0.0-rc.1",

@@ -1,3 +1,35 @@
+/*
+<post>
+>(url)
+<RSSFEED
+
+<get>
+<RSSFEEDz
+
+<get /:id>
+>id
+<rssfeed
+
+<put /:id> #fetches fresh response from feed origin
+>id
+<RSSFEED
+
+<put /:id/last-update>
+>id
+>(date.now)
+<RSSFEED
+
+<put /:id/user-ids>
+>id
+>(a user id)
+<RSSFEED
+
+<delete /:id>
+>rssfeed id
+<RSSFEED
+*/
+
+
 var FeedRead = require('feed-read');
 var Joi = require('joi');
 var R = require('rethinkdb');
@@ -7,6 +39,8 @@ var Database = require('../database');
 
 
 module.exports = [
+	
+	//@return rssFeed [object]
 	{
 		path: '/rss-feed',
 		method: 'POST',
